@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename= 'style.css')}}">
+    <link rel="icon" href="{{url_for('static',filename= 'assets/favicon.ico')}}">
+    <title>Evaluacion #2 Cálculo Númerico</title>
+</head>
+
+<body>
+    <div class="input">
+        <header>
+            <h1>Entrada de Datos</h1>
+        </header>
+        <section>
+            <h2>Método de potencia simetrica</h2>
+            <p>Selecciona una matriz</p>
+            <form action="">
+
+                <div class="matrix">
+                    <input type="radio" name="op" id="op1" class="radio" value="1">
+                    <label class="label label-1" for="op1"><img
+                            src="{{url_for('static',filename='assets/matrix1.png')}}" alt="matrix 1" draggable="false">
+                    </label>
+
+                    <input type="radio" name="op" id="op2" class="radio" value="2">
+                    <label class="label label-2" for="op2"><img
+                            src="{{url_for('static',filename='assets/matrix2.png')}}" alt="matrix 2"
+                            draggable="false"></label>
+
+                    <input type="radio" name="op" id="op3" class="radio" value="3">
+                    <label class="label label-3" for="op3"><img
+                            src="{{url_for('static',filename='assets/matrix3.png')}}" alt="matrix 3"
+                            draggable="false"></label>
+                </div>
+
+                <p>Introduce el número de iteraciones</p>
+                <div class="inputBox">
+                    <input type="text" pattern="^[0-9]+$" required id="exp">
+                    <span>Número de Iteraciones</span>
+                </div>
+            </form>
+        </section>
+        <section>
+            <h2>Interpolación de Taylor</h2>
+            <p>Selecciona una función</p>
+            <div class="function">
+                <input type="radio" name="func" id="func1" class="radio" value="1">
+                <label class="label label-1" for="func1"><img src="{{url_for('static',filename='assets/func1.png')}}"
+                        alt="function 1" draggable="false"></label>
+
+                <input type="radio" name="func" id="func2" class="radio" value="2">
+                <label class="label label-2" for="func2"><img src="{{url_for('static',filename='assets/func2.png')}}"
+                        alt="function 2" draggable="false"></label>
+
+                <input type="radio" name="func" id="func3" class="radio" value="3">
+                <label class="label label-3" for="func3"><img src="{{url_for('static',filename='assets/func3.png')}}"
+                        alt="function 3" draggable="false"></label>
+            </div>
+            <p>Introduce el punto de expansión</p>
+            <div class="inputBox">
+                <input type="text" pattern="^[0-9]+$" required id="PE">
+                <span>Punto de expansión</span>
+            </div>
+            <p>Introduce el punto para el cual se desea realizar la interpolación de Taylor</p>
+            <div class="inputBox">
+                <input type="text" pattern="^[0-9]+$" required id="PI">
+                <span>Punto de interpolación</span>
+            </div>
+        </section>
+        <button>Enviar</button>
+        <!-- TODO Implementar mostrar resultados -->
+    </div>
+    <script src="{{url_for('static',filename= 'script.js')}}"></script>
+</body>
+
+</html>
