@@ -7,6 +7,7 @@ Ademas, se desarrolló una página web que permite al usuario ingresar los datos
 - [Flask](https://flask.palletsprojects.com/en/3.0.x/)
 - [Numpy](https://numpy.org/)
 - [Scipy](https://www.scipy.org/)
+- [Sympy](https://www.sympy.org/es/)
 ## Ejecución
 Para ejecutar el programa, se debe correr el siguiente comando en la terminal:
  ```ps1
