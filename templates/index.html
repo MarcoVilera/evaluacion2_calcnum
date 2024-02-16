@@ -70,8 +70,23 @@
                 <span>Punto de interpolación</span>
             </div>
         </section>
+        <div class="result">
+            <h2>Resultados</h2>
+            <h3>Método de la potencia simetrica</h3>
+            <div class="output">
+                <div>
+                    <p>Eigenvalor</p>
+                    <textarea id="eigen" cols="30" rows="1" readonly></textarea>
+                </div>
+                <div>
+                    <p>Eigenvector</p>
+                    <textarea id="vector" cols="35" rows="1" readonly></textarea>
+                </div>
+            </div>
+            <p>Interpolación de Taylor</p>
+            <textarea id="interpolation" cols="100" rows="2" readonly></textarea>
+        </div>
         <button>Enviar</button>
-        <!-- TODO Implementar mostrar resultados -->
     </div>
     <script src="{{url_for('static',filename= 'script.js')}}"></script>
 </body>

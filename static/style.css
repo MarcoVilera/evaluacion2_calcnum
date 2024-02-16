@@ -3,49 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-}
-
-h1 {
-    font-size: 50px;
-    text-align: center;
-}
-
-button {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-image: linear-gradient(135deg, #77b1e3 0%, #437bcd 100%);
-    color: #fff;
-    font-weight: 500;
-    cursor: pointer;
-
-    width: 6.5rem;
-    text-align: center;
-
-}
-
-button:hover {
-    background-image: linear-gradient(135deg, #5795da 0%, #3c6cc4 100%);
-}
-
-button:active {
-    background-image: linear-gradient(135deg, #437bcd 0%, #345499 100%);
-}
-
-
-section {
-    text-align: center;
-}
-
-.input {
-    padding: 15px;
-    backdrop-filter: blur(10px);
-    border: 1px solid #d4d4d4;
-    border-radius: 10px;
-    font-weight: 500;
-    text-align: center;
-    
+    color: #323232;
 }
 
 body {
@@ -58,14 +16,31 @@ body {
     overflow-x: hidden;
 }
 
-.radio {
-    display: none;
+h1 {
+    font-size: 3.125rem;
+    text-align: center;
 }
 
-.label {
-    padding: 5px;
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(135deg, #77b1e3 0%, #437bcd 100%);
+    color: #fff;
+    font-weight: 500;
     cursor: pointer;
+    margin-top: 0.625rem;
+    width: 6.5rem;
+    text-align: center;
 
+}
+
+button:hover {
+    background-image: linear-gradient(135deg, #5795da 0%, #3c6cc4 100%);
+}
+
+button:active {
+    background-image: linear-gradient(135deg, #437bcd 0%, #345499 100%);
 }
 
 section {
@@ -82,14 +57,66 @@ form {
     flex-direction: column;
 }
 
+textarea {
+    resize: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+div textarea {
+    text-align: center;
+}
+
+p {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+}
+
+.result {
+    display: none;
+}
+
+
+.input {
+    padding: 0.938rem;
+    backdrop-filter: blur(0.625rem);
+    border: 0.063rem solid #d4d4d4;
+    border-radius: 0.625rem;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+
+.radio {
+    display: none;
+}
+
+.label {
+    padding: 0.313rem;
+    cursor: pointer;
+
+}
+
+
+.output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.625rem;
+}
+
 .matrix img {
-    width: 150px;
-    height: 110px;
+    width: 9.375rem;
+    height: 6.875rem;
 }
 
 .function img {
-    width: 315px;
-    height: 75px;
+    width: 19.688rem;
+    height: 4.688rem;
 }
 
 #op1:checked~.label-1 img,
@@ -98,20 +125,20 @@ form {
 #func1:checked~.label-1 img,
 #func2:checked~.label-2 img,
 #func3:checked~.label-3 img {
-    border: 4px solid #437bcd;
+    border: 0.25rem solid #437bcd;
 }
 
 .inputBox {
     position: relative;
-    width: 250px;
+    width: 15.625rem;
 }
 
 .inputBox input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.625rem;
+    border: 0.063rem solid rgba(255, 255, 255, 0.25);
     background: transparent;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     outline: none;
     color: #323232;
     font-size: 1em;
@@ -120,7 +147,7 @@ form {
 .inputBox span {
     position: absolute;
     left: 0;
-    padding: 10px;
+    padding: 0.625rem;
     pointer-events: none;
     font-size: 1em;
     color: rgba(255, 255, 255, 0.25);
@@ -132,15 +159,15 @@ form {
 .inputBox input:valid~span,
 .inputBox input:focus~span {
     color: rgba(255, 255, 255, 0.75);
-    transform: translateX(10px) translateY(-7px);
+    transform: translateX(0.625rem) translateY(-0.438rem);
     font-size: 0.65em;
-    padding: 0 10px;
+    padding: 0 0.625rem;
     background-color: #437bcd;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     letter-spacing: 0.2em;
 }
 
 .inputBox input:valid,
 .inputBox input:focus {
-    border: 1px solid #437bcd;
+    border: 0.063rem solid #437bcd;
 }

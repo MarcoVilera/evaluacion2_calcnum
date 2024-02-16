@@ -64,12 +64,23 @@ send.addEventListener("click", async () => {
             if (!res.ok) {
                 throw "Error en la petición"
             }
+            result = document.querySelector(".result")
+            result.style.display = "block"
+
+            interpolation = document.querySelector("#interpolation")
+            eigen = document.querySelector("#eigen")
+            vector = document.querySelector("#vector")
+
+            interpolation.value = json.inter
+
+            eigen.value = json.potSim[0]
+            vector.value = json.potSim[1]
+
         } catch (error) {
-            console.log("Error en la petición")
+            alert("Error en la petición")
         }
     } catch (error) {
         alert("Error enviando datos, por favor comprobar datos ingresados.")
     }
 
-    //TODO Implementar muestra de resultados
 })
